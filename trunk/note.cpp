@@ -5,6 +5,12 @@ Note::Note()
     id=id::createUuid();
 }
 
+Note::Note(QUuid p_id)
+{
+	id=p_id;
+	//search the perminent storage for note with this id
+}
+
 Note::~Note()
 {
 
