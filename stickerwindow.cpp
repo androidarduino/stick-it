@@ -31,3 +31,13 @@ void stickerWindow::resizeEvent(QResizeEvent*)
         //TODO: here change to the full view, since when the user maximize the window, he/she tends to see more
         qDebug()<<"Change Window Now";
 }
+
+void stickerWindow::closeEvent(QCloseEvent*) //event)
+{
+	saveContent();
+}
+
+void stickerWindow::saveContent()
+{
+	
+}

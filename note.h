@@ -10,9 +10,9 @@ class NoteLabel
 	public:
 		NoteLabel(){}
 		virtual QString serialize()
-                {
-                    QDebug()<<"note label serilized";
-                }
+        {
+             QDebug()<<"note label serilized";
+        }
 	private:
 		QString labelType;
 };
@@ -101,22 +101,22 @@ class MessageNoteLabel: public NoteLabel
 };
 */
 
-class Note
+class Note:public QObject
 {
 	public:
 		QUuid id;//global note id
-                static Board * board;//the board that the sticker can be put on
-		Note(long noteId=0);//constructor
+        static Board * board;//the board that the sticker can be put on
+		Note(QUuid noteId=0);//constructor
 		~Note();//destructor
 		QString toXML();//convert this instance to a xml document
 		bool fromXML(QString xml);//construct the instance from xml stream
-                bool addLabel(NoteLabel& label);
-                bool removeLabel(NoteLabel& label);
+        bool addLabel(NoteLabel& label);
+        bool removeLabel(NoteLabel& label);
 	private:
 		QDateTime dateCreated;//date created
 		QDateTime dateModified;//last modified
 		QString content;//contents of the note
 		QList<NoteLabel> labels;//labels attached to the note
-                QDomDocument doc;
-                void appendProperty(QString name, QString value);
+        QDomDocument doc;
+        void appendProperty(QString name, QString value);
 };
