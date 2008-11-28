@@ -1,9 +1,12 @@
+#ifndef NOTE_H
+#define NOTE_H
 #include <QString>
 #include <QDateTime>
 #include <QList>
 #include <QDebug>
 #include <QDomDocument>
 #include <QDomElement>
+#include <QUuid>
 
 class NoteLabel
 {
@@ -11,8 +14,10 @@ class NoteLabel
 		NoteLabel(){}
 		virtual QString serialize()
         {
-             QDebug()<<"note label serilized";
+             qDebug()<<"note label serilized";
+             return "";
         }
+                virtual ~NoteLabel(){}
 	private:
 		QString labelType;
 };
@@ -103,9 +108,10 @@ class MessageNoteLabel: public NoteLabel
 
 class Note:public QObject
 {
+    Q_OBJECT
 	public:
 		QUuid id;//global note id
-        static Board * board;//the board that the sticker can be put on
+                //static Board * board;//the board that the sticker can be put on
 		Note(QUuid noteId=0);//constructor
 		~Note();//destructor
 		QString toXML();//convert this instance to a xml document
@@ -119,4 +125,7 @@ class Note:public QObject
 		QList<NoteLabel> labels;//labels attached to the note
         QDomDocument doc;
         void appendProperty(QString name, QString value);
+    public slots:
+        void setContent(QString text);
 };
+#endif

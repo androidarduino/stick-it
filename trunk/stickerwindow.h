@@ -2,6 +2,8 @@
 #define STICKERWINDOW
 #include <QtGui>
 #include <QSystemTrayIcon>
+#include "note.h"
+#include "storagedevice.h"
 
 class stickerWindow : public QTextEdit
 {
@@ -17,8 +19,12 @@ class stickerWindow : public QTextEdit
         void dressUp();//decorate the window
     private slots:
         void saveContent();//save the contents in the sticker
+        void updateText();
     private:
         QSystemTrayIcon * trayIcon;
+        Note* note;
+        QMap<QString, StorageDevice*> storageList;
+        //TODO: void analyzeText();
 };
 
 #endif //STICKERWINDOW

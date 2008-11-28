@@ -6,7 +6,9 @@ TEMPLATE = app
 TARGET = 
 DEPENDPATH += .
 INCLUDEPATH += .
+QT +=xml
+CONFIG +=debug
 
 # Input
-HEADERS += stickerwindow.h note.h
-SOURCES += main.cpp stickerwindow.cpp
+HEADERS += stickerwindow.h note.h storagedevice.h localdiskstorage.h
+SOURCES += main.cpp stickerwindow.cpp note.cpp
