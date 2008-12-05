@@ -1,0 +1,31 @@
+<notes>
+  <note id="{035108c5-6438-4a33-b87d-af9621e52574}" >&lt;note>
+  &lt;uid>{035108c5-6438-4a33-b87d-af9621e52574}&lt;/uid>
+  &lt;dateCreated>&lt;/dateCreated>
+  &lt;dateModified>&lt;/dateModified>
+  &lt;content>aaaaa&lt;/content>
+&lt;/note>
+</note>
+  <note id="{87cefd1b-2c13-402b-84bc-8e4f2d2fc1b9}" >&lt;note>
+  &lt;uid>{87cefd1b-2c13-402b-84bc-8e4f2d2fc1b9}&lt;/uid>
+  &lt;dateCreated>&lt;/dateCreated>
+  &lt;dateModified>&lt;/dateModified>
+  &lt;content>bbbbb&lt;/content>
+&lt;/note>
+</note>
+  <note id="{2a30930d-88b3-4598-a087-6d59740f248e}" >&lt;note>
+  &lt;uid>{2a30930d-88b3-4598-a087-6d59740f248e}&lt;/uid>
+  &lt;dateCreated>&lt;/dateCreated>
+  &lt;dateModified>&lt;/dateModified>
+  &lt;content>yes, i am naughty.&lt;/content>
+&lt;/note>
+</note>
+  <note id="{c0c47712-b8bc-4aa6-9e8d-3956943f9cd0}" >&lt;note>
+  &lt;uid>{c0c47712-b8bc-4aa6-9e8d-3956943f9cd0}&lt;/uid>
+  &lt;dateCreated>&lt;/dateCreated>
+  &lt;dateModified>&lt;/dateModified>
+  &lt;content>hello this is a test message
+&lt;/content>
+&lt;/note>
+</note>
+</notes>
